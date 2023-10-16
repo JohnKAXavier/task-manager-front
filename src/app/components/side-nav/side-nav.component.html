@@ -1,0 +1,14 @@
+<div class="nav-items">
+  <div class="nav-item">
+    <fa-icon [icon]="faDashboard"></fa-icon>
+    <span>Dashboard</span>    
+  </div>
+  <div class="nav-item" (click)="navigateTo('create-task')">
+    <fa-icon [icon]="faPlus"></fa-icon>
+    <span>Criar Tarefa</span>    
+  </div>
+  <div class="nav-item" (click)="navigateTo('tasks')">
+    <fa-icon [icon]="faListCheck"></fa-icon>
+    <span>Tarefas</span>    
+  </div>  
+</div>

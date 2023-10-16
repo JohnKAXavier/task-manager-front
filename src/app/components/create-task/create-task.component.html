@@ -1,0 +1,50 @@
+<div class="content">
+  <form [formGroup]="formPromo" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="title">Título</mat-label>
+          <input matInput formControlName="title" id="title" name="title" />          
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="description">Descrição</mat-label>
+          <input matInput formControlName="description" id="description" name="description" />          
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="responsible">Responsavel</mat-label>
+          <mat-select formControlName="responsible" id="responsible" name="responsible">
+            <mat-option value="JOao">JOao</mat-option>
+            <mat-option value="Luis">Luis</mat-option>
+            <mat-option value="Claido">Claido</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="priotity">Prioridade</mat-label>
+          <mat-select formControlName="priotity" id="priotity" name="priotity">
+            <mat-option value="HIGH">Alta</mat-option>
+            <mat-option value="MEDIUM">Média</mat-option>
+            <mat-option value="LOW">Baixa</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+      <mat-form-field>
+        <mat-label>Deadline</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="picker" id="picker" name="picker">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>      
+    </div>
+    <div class="form-group submit-button">
+      <button mat-flat-button color="accent" type="submit">
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
